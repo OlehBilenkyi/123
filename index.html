@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма задания стажера</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="job-form">
+        <div class="card">
+          <h2>Client details</h2>
+          <div class="form-group">
+            <input
+              type="text"
+              placeholder="First name"
+              id="first-name"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Last name"
+              id="last-name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="Phone" id="phone" required />
+            <input type="email" placeholder="Email (optional)" id="email" />
+          </div>
+        </div>
+        <div class="card">
+          <h2>Job type</h2>
+          <div class="form-group">
+            <select id="job-type" required>
+              <option value="">Select job type</option>
+              <option value="type1">Type 1</option>
+              <option value="type2">Type 2</option>
+            </select>
+            <select id="job-source" required>
+              <option value="">Select job source</option>
+              <option value="source1">Source 1</option>
+              <option value="source2">Source 2</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea
+              placeholder="Job description (optional)"
+              id="job-description"
+            ></textarea>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Service location</h2>
+          <div class="form-group">
+            <input type="text" placeholder="Address" id="address" required />
+            <input type="text" placeholder="City" id="city" required />
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="State" id="state" required />
+            <input type="text" placeholder="Zip code" id="zip-code" required />
+            <select id="area" required>
+              <option value="">Select area</option>
+              <option value="area1">Area 1</option>
+              <option value="area2">Area 2</option>
+            </select>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Scheduled</h2>
+          <div class="form-group">
+            <input type="date" id="start-date" required />
+            <input type="time" id="start-time" required />
+            <input type="time" id="end-time" required />
+          </div>
+          <div class="form-group">
+            <select id="technician" required>
+              <option value="">Select technician</option>
+              <option value="tech1">Technician 1</option>
+              <option value="tech2">Technician 2</option>
+            </select>
+          </div>
+        </div>
+        <div class="button-group">
+          <button type="submit" id="create-job">Create job</button>
+          <button type="submit" id="save-info">Save info</button>
+        </div>
+      </form>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
